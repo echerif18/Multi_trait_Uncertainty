@@ -1,7 +1,7 @@
 
 # 🌍 Uncertainty Assessment in Deep Learning-based Plant Trait Retrievals from Hyperspectral Data
 
-![Workflow](workflow.png)
+![Workflow](Un_models_95QuReg/workflow.png)
 
 ## 📌 Description
 With the advent of **Hyperspectral satellites** and **Deep Learning**, we have the chance to monitor **biodiversity on a global scale** as a contribution to **global digital data streams**. 
@@ -29,4 +29,8 @@ Unlike traditional uncertainty estimation approaches, **Dis_UN** quantifies **wo
 
 ### **🔹 Installation Steps**
 1. **Clone the repository**
-2. 
+2. **conda create -n <environment-name> python==3.9**
+3. **conda activate <environment-name>**
+4. **Install tensorflow (The trained model was tested for =2.7.0). May vary with your system.**
+5. **cd into the cloned repo**
+6. **pip install -r requirements.txt**
