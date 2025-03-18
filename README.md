@@ -34,3 +34,38 @@ Unlike traditional uncertainty estimation approaches, **Dis_UN** quantifies **wo
 4. **Install tensorflow (The trained model was tested for =2.7.0). May vary with your system.**
 5. **cd into the cloned repo**
 6. **pip install -r requirements.txt**
+
+
+## 🚀 Usage
+
+### 1️⃣ Distance Calculation
+To generate the distances of a **new scene** to the training data, run:
+```
+python distInference.py \
+  --r ./Data/TrainingSpectra_1522.csv \
+  --modelpath ./DL_Model/ \
+  --inferpath ./Data/CaseStudies/EnMAP/clip2_south.tif \
+  --metapath ./Data/CaseStudies/EnMAP/EnmapBands.csv \
+  --ne 50 \
+  --lay -4 \
+  --norVec True \
+  --emb True \
+  --sp True \
+  --nor True \
+  --gpu 0 \
+  --sceneText clip2_southSpLastlayQuNor_Test
+```
+
+
+### 2️⃣ Apply the Model for Uncertainty Estimation
+To infer uncertainty maps, run:
+
+```
+python distance_UN.py \
+  --modelpath ./Un_models_95QuReg/ \
+  --path_dist_ts ./distances/DistQuInferenceEnMAP_50neighFaiss_SpLastlayQuNor.csv \
+  --sceneText clip2_southSpLastlayQuNor_Un 
+
+```
+
+
