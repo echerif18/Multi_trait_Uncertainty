@@ -1,0 +1,21 @@
+matplotlib
+seaborn
+numpy
+pandas
+scikit_learn #==1.2.1s
+scipy
+rasterio
+#multiprocessing
+#time
+psutil
+protobuf==3.20.*
+
+tensorflow==2.7.0
+tensorflow_addons==0.18.0
+
+##conda install -c conda-forge faiss-gpu
+rasterio
+statsmodels
+spyndex 
+pystac_client
+rio_tiler
